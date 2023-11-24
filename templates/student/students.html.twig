@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Students {% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+
+    <h3 class="mb-4" > Here are all students : </h3>
+
+        <table class="table text-center table-bordered table-hover">
+
+                <thead class="table-success">
+                    <tr>
+                        <th scope="col"> # </th>
+                        <th scope="col"> First name </th>
+                        <th scope="col"> Last name </th>
+                        <th scope="col"> Age </th>
+                        <th scope="col" width="20%"> Actions </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for student in students %}
+
+                        <tr>
+                            <th scope="row"> {{ student.getId() }} </th>
+                            <td> {{ student.getFirstName() }} </td>
+                            <td> {{ student.getLastName() }} </td>
+                            <td> {{ student.getAge() }} </td>
+                            <td>
+                                <a href="{{ path('delete_student' , {id : student.getId()}) }}" title="delete" class="btn btn-outline-danger"> <i class='bx bxs-trash-alt'></i> </a>
+                                <a href="{{ path('update_student' , {id : student.getId()}) }}" title="edit" class="btn btn-outline-success"> <i class='bx bxs-calendar-edit' ></i> </a>
+                                <a href="{{ path('show_student_page' , {id : student.getId()}) }}" title="show" class="btn btn-outline-warning"> <i class='bx bxs-show' ></i> </a>
+                                <a href="{{ path('generate_student_pdf' , {id : student.getId()}) }}" title="generate pdf" class="btn btn-outline-secondary"> <i class='bx bxs-file-pdf'></i> </a>
+                            </td>
+                        </tr>
+                        
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+    </div>
+
+{% endblock %}

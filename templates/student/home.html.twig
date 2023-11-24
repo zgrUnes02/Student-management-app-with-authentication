@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+    <div class="container mt-3">    
+
+        <h3 class="mb-3"> Here you can do : </h3>
+
+        <div class="card-deck">
+        
+            <div class="card mb-4">
+                <div class="card-body">
+                <h5 class="card-title"> Create new student </h5>
+                <p class="card-text">
+                    Creating a new student involves adding their information to the database, including details such as name, ID, contact information, and initial academic records. This process establishes a comprehensive profile for the student within the educational system.
+                </p>
+                </div>
+                <div class="card-footer">
+                <a class="btn btn-outline-primary"  href="{{ path('create_student_page') }}">
+                    <small class="text-muted"> click and move to students table ! </small>
+                </a>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-body">
+                <h5 class="card-title"> Update student information </h5>
+                <p class="card-text">
+                    Updating student records involves modifying or adding information to a student's profile, such as changes in personal details, academic achievements, or contact information. This process ensures that the student database reflects the most accurate and current information for effective communication and administration within the educational institution.
+                </p>
+                </div>
+                <div class="card-footer">
+                <a class="btn btn-outline-primary"  href="/students">
+                    <small class="text-muted"> click and move to students table ! </small>
+                </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title"> Delete a student </h5>
+                <p class="card-text">
+                    Deleting student records involves removing a student's information from the database, including personal details, academic records, and any associated data. This action is typically performed in compliance with data privacy regulations and institutional policies.
+                </p>
+                </div>
+                <div class="card-footer">
+                <a class="btn btn-outline-primary" href="/students">
+                    <small class="text-muted"> click and move to students table ! </small>
+                </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

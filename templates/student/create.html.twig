@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Create new student {% endblock %}
+
+{% block body %}
+
+    <div class="container mt-4">    
+
+        <h3 class="mb-4" > Here you can create new student :  </h3>
+
+        {{ form(form, {'method': 'POST'}) }}
+        
+    </div>
+
+{% endblock %}

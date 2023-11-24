@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Students {% endblock %}
+
+{% block body %}
+
+    <div class="container mt-5">
+
+    <h3 class="mb-4" > Here is the student " {{ student.getFirstName() | capitalize }} "  </h3>
+
+        <table class="table text-center table-bordered table-hover">
+                <tbody>
+
+                    <tr>
+                        <th class="table-success"> First name </th>
+                        <td> {{ student.getFirstName() }} </td>
+                    </tr>
+
+                    <tr>
+                        <th class="table-success"> Last name </th>
+                        <td> {{ student.getLastName() }} </td>
+                    </tr>
+
+                    <tr>
+                        <th class="table-success"> Age </th>
+                        <td> {{ student.getAge() }} years old </td>
+                    </tr>
+
+                    <tr>
+                        <th class="table-success"> Image </th>
+                        <td>
+                            <img style="width:200px" src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="student image" />
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <a href="/students" class="btn btn-primary"> Back </a>
+
+    </div>
+
+{% endblock %}
