@@ -49,10 +49,16 @@
             <input type="hidden" name="_csrf_token"
                 value="{{ csrf_token('authenticate') }}"
             >
+            
+            <div style="display:flex ; justify-content:space-between ; align-items:center">
+                <button class="btn btn-primary" type="submit">
+                    Sign in
+                </button>
 
-            <button class="btn btn-primary" type="submit">
-                Sign in
-            </button>
+                <div>
+                    <a href="/register"> don't have account? </a>
+                </div>
+            </div>
         </form>
     </div>
 
